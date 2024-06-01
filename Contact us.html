@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+
+    <link rel="stylesheet" href="Contact us.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div class="Hospital">
+       <p><span class="logo"><b>Thumbay Hospital</b></span></p>
+        </div>
+        <ul>
+            <li><i><a href="Acedemic health system.html">Acedemics</a></i></li>
+            <li><i><a href="Locations.html">Locations</a></i></li>
+            <li><i><a href="Services.html">Services</a></i></li>
+            <li><i><a href="Corporate info.html">Corporate info</a></i></li>
+            <li><i><a href="Contact us.html">Contact us</a></i></li>
+            </ul>
+            </nav>
+
+         <div class="para">
+            <form onsubmit="sendEmail(); reset(); return false">
+                <h1>CONTACT US</h1>
+       <input type="text" id="name" placeholder="Your Name" required>
+       <input type="email" id="email" placeholder="Email ID" required>
+       <input type="text" id="Phone" placeholder="Phone no" required>
+       <textarea id="message" rows="6" placeholder="How can we help you?"></textarea>
+       <button type="submit">Send</button>
+
+          </form>  
+</div> 
+<script src=" https://smtpjs.com/v3/smtp.js"></script>   
+<script>
+function sendEmail(){
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "rwasti@hotmail.com",
+    Password : "Ifrobia",
+    To : 'anabiawasti2005@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact form enquiry",
+    Body : "Name:"+ document.getElementById("name").value
+  +"<br> Gmail: " + document.getElementById("Gmail").value
+   +"<br> Phone no: " + document.getElementById("Phone").value
+   +"<br> Message: " + document.getElementById("Message").value
+}).then(
+  message => alert("Message Sent Successfully")
+);
+}
+</script>
+<style>
+    body {
+        margin: 0 ;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 1;
+        /* Your main content styles */
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+
+<!-- Your main content here -->
+</div>
+<footer class="footer">
+<div class="icons">
+    <a href="https://www.facebook.com/thumbayhospital" target="_blank"><i class='bx bxl-facebook'></i></a>
+    <a href="https://www.linkedin.com/company/thumbay-hospital/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://www.instagram.com/thumbayhospitaluae/" target="_blank"><i class='bx bxl-instagram'></i></a>
+    <a href="https://www.youtube.com/playlist?list=PL9fy45gQnCZVvJco_pqgqBJfr0KStSywi" target="_blank"><i class='bx bxl-youtube'></i></a>
+    <a href="https://x.com/thumbayhosp" target="_blank"><i class='bx bxl-twitter'></i></a>   
+</div>
+
+<div class="list">
+    <ul>
+    <li><a href="#">FAQ</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">About me</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+
+<div class="footerbottom">
+    <p class="Copyrights">Copyright © 2024 Thumbay Hospital. All rights reserved. MOH NO – WK70725-08/08/2019</p>
+</div>
+</footer>  
+</body>
+</html>
